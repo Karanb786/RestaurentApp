@@ -80,59 +80,79 @@
         app:layout_constraintVertical_bias="0.616">
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/welcomeTextView"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textColor="#1ba2f4"
-                android:text="LOGIN"
+                android:text="Urban Rider food app"
                 android:textSize="20dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"/>
-            <EditText
-                android:layout_marginTop="40dp"
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:hint="Phone Number"
-                android:inputType="phone"
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/signInButton"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/loggedInLayout"
                 android:layout_gravity="center"
-                android:gravity="center"
-                />
-            <EditText
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:layout_gravity="center"
-                android:gravity="center"/>
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="195dp"
-                android:layout_height="50dp"
-                android:text="Forgot Password?"
-                android:layout_gravity="center"
-                android:gravity="right"
-                android:textColor="#1ba2f4"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Who are you today?"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
             <Button
+                android:id="@+id/customerTypeButton"
+                android:layout_marginTop="20dp"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:background="@drawable/submitbutton"
-                android:text="Login"
+                android:text="Customer"
+                android:textColor="#ffffff"/>
+            <Button
+                android:id="@+id/courierTypeButton"
+            android:layout_marginTop="25dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/submitbutton"
+            android:text="Courier"
+            android:textColor="#ffffff"/>
+
+            <Button
+                android:id="@+id/signOutButton"
+                android:layout_marginTop="25dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/submitbutton"
+                android:text="Sign out"
+                android:textColor="#ffffff"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/aboutPageButton"
+                android:layout_marginTop="25dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/submitbutton"
+                android:text="About"
                 android:textColor="#ffffff"/>
 
-            <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/signpage"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="Don't have account? Sign up"
-                android:textColor="#1ba2f4"
-                android:textStyle="bold" />
 
         </LinearLayout>
 
